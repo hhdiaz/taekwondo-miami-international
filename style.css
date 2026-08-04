@@ -351,7 +351,7 @@ img{ max-width: 100%; display:block; }
 .about-photo-placeholder{
   background: repeating-linear-gradient(45deg, #10151f, #10151f 12px, #0b0e16 12px, #0b0e16 24px);
   border-radius: 8px;
-  min-height: 300px;
+  min-height: 400px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -359,32 +359,36 @@ img{ max-width: 100%; display:block; }
   font-size:.85rem;
   text-align:center;
   padding: 20px;
+  margin-top: 50px;
 }
-.benefits-grid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  background: var(--black-soft);
-  border-radius: 10px;
-  padding: 32px;
-}
-.benefit{
+.strengths-list{
+  list-style:none;
   display:flex;
-  gap: 16px;
-  align-items:flex-start;
-  padding: 12px;
+  flex-direction:column;
+  gap: 13px;
+  margin-bottom: 30px;
+  max-width: 480px;
 }
-.benefit-icon{
-  font-size: 1.6rem;
+.strengths-list li{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  font-size:.92rem;
+  font-weight:600;
+  color: var(--white);
+}
+.strengths-list .check{
   flex-shrink:0;
-}
-.benefit h4{
-  font-size: .85rem;
-  margin-bottom: 6px;
-}
-.benefit p{
-  font-size:.8rem;
-  color: var(--gray-text);
+  width: 22px;
+  height: 22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background: rgba(61,132,255,.15);
+  color: var(--blue-light);
+  font-size:.75rem;
+  font-weight:900;
 }
 
 /* ===================== SCHEDULE ===================== */
@@ -731,8 +735,7 @@ img{ max-width: 100%; display:block; }
 }
 
 @media (max-width: 900px){
-  .about-grid,
-  .benefits-grid{ grid-template-columns: 1fr; }
+  .about-grid{ grid-template-columns: 1fr; }
 }
 
 @media (max-width: 1150px){
