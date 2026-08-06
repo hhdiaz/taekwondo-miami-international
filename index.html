@@ -15,7 +15,7 @@
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
       <a href="#home" class="logo">
-        <img src="logo.png" alt="Logo de la escuela" class="logo-img">
+        <img src="images/logo.png" alt="Logo de la escuela" class="logo-img">
       </a>
 
       <nav class="main-nav" id="mainNav">
@@ -45,7 +45,7 @@
   <!-- ===== HERO ===== -->
   <section class="hero" id="home">
     <div class="hero-media">
-      <img src="hero.png" alt="Alumno pateando en el dojo" class="hero-photo">
+      <img src="images/hero.png" alt="Alumno pateando en el dojo" class="hero-photo">
       <div class="hero-gradient"></div>
     </div>
 
@@ -199,24 +199,33 @@
 
     <div class="instructors-grid">
       <article class="instructor-card">
-        <div class="instructor-photo-placeholder"><span>[ Foto instructor ]</span></div>
-        <h3>NOMBRE APELLIDO</h3>
-        <span class="age-tag">Master Instructor · 5th Dan</span>
-        <p>Breve biografía del instructor: años de experiencia, especialidad, logros o certificaciones.</p>
+        <div class="instructor-photo-placeholder">
+          <img  src="images/instructors/instructor-oliver.jpg" alt="Maestro Oliver Largaespada" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <span class="photo-fallback">[ Foto instructor ]</span>
+        </div>
+        <h3>OLIVER LARGAESPADA</h3>
+        <span class="age-tag">Head Instructor</span>
+        <p>Experienced Olympic Taekwondo coach, dedicated to helping every student reach their full potential.</p>
       </article>
 
       <article class="instructor-card">
-        <div class="instructor-photo-placeholder"><span>[ Foto instructor ]</span></div>
-        <h3>NOMBRE APELLIDO</h3>
-        <span class="age-tag">Head Instructor · 4th Dan</span>
-        <p>Breve biografía del instructor: años de experiencia, especialidad, logros o certificaciones.</p>
+        <div class="instructor-photo-placeholder">
+          <img src="images/instructors/instructor-moises.jpg" alt="Maestro Moisés De La Cruz" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <span class="photo-fallback">[ Foto instructor ]</span>
+        </div>
+        <h3>MOISÉS DE LA CRUZ</h3>
+        <span class="age-tag">Instructor</span>
+        <p>Committed to developing disciplined, confident, and respectful students through quality instruction.</p>
       </article>
 
       <article class="instructor-card">
-        <div class="instructor-photo-placeholder"><span>[ Foto instructor ]</span></div>
-        <h3>NOMBRE APELLIDO</h3>
-        <span class="age-tag">Instructor · 2nd Dan</span>
-        <p>Breve biografía del instructor: años de experiencia, especialidad, logros o certificaciones.</p>
+        <div class="instructor-photo-placeholder">
+          <img src="images/instructors/instructor-nicolas.jpg" alt="Maestro Nicolás De La Cruz" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <span class="photo-fallback">[ Foto instructor ]</span>
+        </div>
+        <h3>NICOLÁS DE LA CRUZ</h3>
+        <span class="age-tag">Instructor</span>
+        <p>Passionate about inspiring students of all ages, promoting discipline, perseverance, and excellence.</p>
       </article>
     </div>
   </section>
@@ -225,15 +234,76 @@
   <section class="gallery" id="gallery">
     <h2 class="section-title">PHOTO <span class="text-accent">GALLERY</span></h2>
 
-    <div class="gallery-grid">
-      <div class="gallery-item"><span>[ Foto 1 ]</span></div>
-      <div class="gallery-item"><span>[ Foto 2 ]</span></div>
-      <div class="gallery-item"><span>[ Foto 3 ]</span></div>
-      <div class="gallery-item"><span>[ Foto 4 ]</span></div>
-      <div class="gallery-item"><span>[ Foto 5 ]</span></div>
-      <div class="gallery-item"><span>[ Foto 6 ]</span></div>
-      <div class="gallery-item"><span>[ Foto 7 ]</span></div>
-      <div class="gallery-item"><span>[ Foto 8 ]</span></div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item">
+        <img src="images/gallery/gallery-1.jpg" alt="Foto de la escuela 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="photo-fallback">[ Foto 1 ]</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery/gallery-2.jpg" alt="Foto de la escuela 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="photo-fallback">[ Foto 2 ]</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery/gallery-3.jpg" alt="Foto de la escuela 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="photo-fallback">[ Foto 3 ]</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery/gallery-4.jpg" alt="Foto de la escuela 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="photo-fallback">[ Foto 4 ]</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery/gallery-5.jpg" alt="Foto de la escuela 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="photo-fallback">[ Foto 5 ]</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery/gallery-6.jpg" alt="Foto de la escuela 6" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="photo-fallback">[ Foto 6 ]</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery/gallery-7.jpg" alt="Foto de la escuela 7" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="photo-fallback">[ Foto 7 ]</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery/gallery-8.jpg" alt="Foto de la escuela 8" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="photo-fallback">[ Foto 8 ]</span>
+      </div>
+
+      <div class="gallery-item gallery-item--hidden">
+        <img src="images/gallery/gallery-9.jpg" alt="Foto de la escuela 9" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="photo-fallback">[ Foto 9 ]</span>
+      </div>
+      <div class="gallery-item gallery-item--hidden">
+        <img src="images/gallery/gallery-10.jpg" alt="Foto de la escuela 10" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="photo-fallback">[ Foto 10 ]</span>
+      </div>
+      <div class="gallery-item gallery-item--hidden">
+        <img src="images/gallery/gallery-11.jpg" alt="Foto de la escuela 11" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="photo-fallback">[ Foto 11 ]</span>
+      </div>
+      <div class="gallery-item gallery-item--hidden">
+        <img src="images/gallery/gallery-12.jpg" alt="Foto de la escuela 12" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="photo-fallback">[ Foto 12 ]</span>
+      </div>
+      <div class="gallery-item gallery-item--hidden">
+        <img src="images/gallery/gallery-13.jpg" alt="Foto de la escuela 13" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="photo-fallback">[ Foto 13 ]</span>
+      </div>
+      <div class="gallery-item gallery-item--hidden">
+        <img src="images/gallery/gallery-14.jpg" alt="Foto de la escuela 14" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="photo-fallback">[ Foto 14 ]</span>
+      </div>
+      <div class="gallery-item gallery-item--hidden">
+        <img src="images/gallery/gallery-15.jpg" alt="Foto de la escuela 15" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="photo-fallback">[ Foto 15 ]</span>
+      </div>
+      <div class="gallery-item gallery-item--hidden">
+        <img src="images/gallery/gallery-16.jpg" alt="Foto de la escuela 16" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="photo-fallback">[ Foto 16 ]</span>
+      </div>
+    </div>
+
+    <div class="gallery-load-more-wrap">
+      <button class="btn btn-outline" id="loadMoreBtn">LOAD MORE <span class="arrow">↓</span></button>
     </div>
   </section>
 

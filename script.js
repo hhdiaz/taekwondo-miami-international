@@ -97,6 +97,27 @@ lightbox.addEventListener('click', (e) => {
   if (e.target === lightbox) closeLightbox();
 });
 
+// ===== Botón "Load More" de la galería =====
+const loadMoreBtn = document.getElementById('loadMoreBtn');
+const BATCH_SIZE = 4; // cuántas fotos se muestran por cada clic
+
+if (loadMoreBtn) {
+  loadMoreBtn.addEventListener('click', () => {
+    const hiddenItems = document.querySelectorAll('.gallery-item--hidden');
+
+    hiddenItems.forEach((item, index) => {
+      if (index < BATCH_SIZE) {
+        item.classList.remove('gallery-item--hidden');
+      }
+    });
+
+    // si ya no quedan fotos ocultas, oculta el botón
+    if (document.querySelectorAll('.gallery-item--hidden').length === 0) {
+      loadMoreBtn.style.display = 'none';
+    }
+  });
+}
+
 // ===== Formulario de contacto =====
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
