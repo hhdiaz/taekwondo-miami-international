@@ -85,8 +85,30 @@
 
         <a href="#about" class="btn btn-primary">LEARN MORE ABOUT US <span class="arrow">→</span></a>
       </div>
-      <div class="about-photo-placeholder">
-        <span>[ Foto interior del dojo ]</span>
+      <div class="about-carousel" id="aboutCarousel">
+        <div class="about-carousel-track" id="aboutCarouselTrack">
+          <div class="about-carousel-slide">
+            <img src="images/about-1.jpg" alt="Interior del dojo 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <span class="photo-fallback">[ Foto interior del dojo 1 ]</span>
+          </div>
+          <div class="about-carousel-slide">
+            <img src="images/about-2.jpg" alt="Interior del dojo 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <span class="photo-fallback">[ Foto interior del dojo 2 ]</span>
+          </div>
+          <div class="about-carousel-slide">
+            <img src="images/about-3.jpg" alt="Interior del dojo 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <span class="photo-fallback">[ Foto interior del dojo 3 ]</span>
+          </div>
+          <div class="about-carousel-slide">
+            <img src="images/about-4.jpg" alt="Interior del dojo 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <span class="photo-fallback">[ Foto interior del dojo 4 ]</span>
+          </div>
+        </div>
+
+        <button class="carousel-arrow carousel-arrow--prev" id="carouselPrev" aria-label="Foto anterior">‹</button>
+        <button class="carousel-arrow carousel-arrow--next" id="carouselNext" aria-label="Foto siguiente">›</button>
+
+        <div class="carousel-dots" id="carouselDots"></div>
       </div>
     </div>
   </section>

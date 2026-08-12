@@ -118,6 +118,59 @@ if (loadMoreBtn) {
   });
 }
 
+// ===== Carrusel de fotos en About =====
+const carousel = document.getElementById('aboutCarousel');
+const track = document.getElementById('aboutCarouselTrack');
+const prevBtn = document.getElementById('carouselPrev');
+const nextBtn = document.getElementById('carouselNext');
+const dotsWrap = document.getElementById('carouselDots');
+
+if (carousel && track) {
+  const slides = track.querySelectorAll('.about-carousel-slide');
+  const total = slides.length;
+  let current = 0;
+  let autoplayTimer = null;
+  const AUTOPLAY_MS = 3500;
+
+  // crea los puntos indicadores
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.classList.add('carousel-dot');
+    if (i === 0) dot.classList.add('active');
+    dot.setAttribute('aria-label', `Ir a la foto ${i + 1}`);
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsWrap.appendChild(dot);
+  });
+  const dots = dotsWrap.querySelectorAll('.carousel-dot');
+
+  function goToSlide(index) {
+    current = (index + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach(d => d.classList.remove('active'));
+    dots[current].classList.add('active');
+  }
+
+  function nextSlide() { goToSlide(current + 1); }
+  function prevSlide() { goToSlide(current - 1); }
+
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayTimer = setInterval(nextSlide, AUTOPLAY_MS);
+  }
+  function stopAutoplay() {
+    if (autoplayTimer) clearInterval(autoplayTimer);
+  }
+
+  nextBtn.addEventListener('click', () => { nextSlide(); startAutoplay(); });
+  prevBtn.addEventListener('click', () => { prevSlide(); startAutoplay(); });
+
+  // pausa el autoplay mientras el usuario tiene el mouse encima
+  carousel.addEventListener('mouseenter', stopAutoplay);
+  carousel.addEventListener('mouseleave', startAutoplay);
+
+  startAutoplay();
+}
+
 // ===== Formulario de contacto =====
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
