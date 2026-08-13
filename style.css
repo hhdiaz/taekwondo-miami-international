@@ -342,7 +342,6 @@ img{ max-width: 100%; display:block; }
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items:center;
-  margin-bottom: 56px;
 }
 .about-text h2{
   font-size: clamp(1.5rem, 3vw, 2.1rem);
@@ -867,7 +866,7 @@ img{ max-width: 100%; display:block; }
 
 @media (max-width: 900px){
   .about-grid{ grid-template-columns: 1fr; }
-  .about-carousel{ min-height: 320px; }
+  .about-carousel{ order: -1; min-height: 320px; }
   .about-carousel-track,
   .about-carousel-slide{ min-height: 320px; }
 }
@@ -908,6 +907,9 @@ img{ max-width: 100%; display:block; }
   .stars-divider{ margin: 16px 0; }
   .hero-sub{ font-size: .9rem; margin-bottom: 26px; }
   .hero-buttons .btn{ padding: 8px 15px; font-size: .75rem; width: 50%; margin-top: 10px; }
+  .about-carousel{
+    height: 250px;
+  }
 }
 
 /* Móvil chico (iPhone SE y similares) */
