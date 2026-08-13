@@ -827,24 +827,13 @@ img{ max-width: 100%; display:block; }
 .contact-bar .btn{ flex-shrink:0; }
 
 /* ===================== RESPONSIVE ===================== */
-@media (max-width: 1100px){
-  .programs-grid{ grid-template-columns: repeat(3, 1fr); }
-  .schedule-grid{ grid-template-columns: repeat(3, 1fr); }
-  .instructors-grid{ grid-template-columns: repeat(2, 1fr); }
-  .gallery-grid{ grid-template-columns: repeat(3, 1fr); }
-}
 
+/* Tablet grande / laptop chica */
 @media (max-width: 1150px){
   .main-nav{ display:none; }
   .nav-toggle{ display:flex; }
   .phone-link span{ display:none; }
-}
 
-@media (max-width: 900px){
-  .about-grid{ grid-template-columns: 1fr; }
-}
-
-@media (max-width: 1150px){
   .main-nav.open{
     display:flex;
     flex-direction:column;
@@ -857,6 +846,22 @@ img{ max-width: 100%; display:block; }
   }
 }
 
+/* Tablet */
+@media (max-width: 1100px){
+  .programs-grid{ grid-template-columns: repeat(3, 1fr); }
+  .schedule-grid{ grid-template-columns: repeat(3, 1fr); }
+  .instructors-grid{ grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid{ grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px){
+  .about-grid{ grid-template-columns: 1fr; }
+  .about-carousel{ min-height: 320px; }
+  .about-carousel-track,
+  .about-carousel-slide{ min-height: 320px; }
+}
+
+/* Móvil grande */
 @media (max-width: 640px){
   .programs-grid{ grid-template-columns: 1fr 1fr; }
   .schedule-grid{ grid-template-columns: 1fr 1fr; }
@@ -865,4 +870,22 @@ img{ max-width: 100%; display:block; }
   .form-row{ grid-template-columns: 1fr; }
   .hero{ min-height: 560px; }
   .header-actions .phone-link{ display:none; }
+
+  .about-carousel{ min-height: 240px; }
+  .about-carousel-track,
+  .about-carousel-slide{ min-height: 240px; }
+  .carousel-arrow{ width: 34px; height: 34px; font-size: 1.3rem; }
+
+  .contact-form{ padding: 22px; }
+  .form-group{ margin-bottom: 14px; }
+}
+
+/* Móvil chico (iPhone SE y similares) */
+@media (max-width: 420px){
+  .programs-grid{ grid-template-columns: 1fr; }
+  .schedule-grid{ grid-template-columns: 1fr; }
+  .gallery-grid{ grid-template-columns: 1fr 1fr; }
+
+  .hero-buttons{ flex-direction: column; align-items: stretch; }
+  .hero-buttons .btn{ justify-content: center; }
 }
