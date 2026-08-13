@@ -102,14 +102,17 @@ img{ max-width: 100%; display:block; }
   transition: width .35s ease, height .35s ease, top .35s ease, transform .35s ease;
 }
 
-/* Estado compacto al hacer scroll: el logo cabe dentro del header */
-.site-header.scrolled{
+/* Estado compacto al hacer scroll o con el menú móvil abierto: el logo cabe dentro del header */
+.site-header.scrolled,
+.site-header.menu-open{
   background: rgba(5,7,13,1);
 }
-.site-header.scrolled .header-inner{
+.site-header.scrolled .header-inner,
+.site-header.menu-open .header-inner{
   padding: 6px 24px;
 }
-.site-header.scrolled .logo-img{
+.site-header.scrolled .logo-img,
+.site-header.menu-open .logo-img{
   width: 46px;
   height: 46px;
   top: 50%;
@@ -900,7 +903,6 @@ img{ max-width: 100%; display:block; }
   }
   .header-actions{ gap: 8px; }
   .header-actions .btn{ padding: 8px 12px; font-size: .66rem; }
-
   /* portada: letras y botones más chicos para que se lea mejor de un vistazo */
   .hero h1{ font-size: 1.9rem; }
   .stars-divider{ margin: 16px 0; }

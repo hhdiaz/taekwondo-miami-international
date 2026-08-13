@@ -4,12 +4,14 @@ const mainNav = document.getElementById('mainNav');
 
 navToggle.addEventListener('click', () => {
   mainNav.classList.toggle('open');
+  siteHeader.classList.toggle('menu-open');
 });
 
 // Cierra el menú móvil al hacer clic en un enlace
 mainNav.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     mainNav.classList.remove('open');
+    siteHeader.classList.remove('menu-open');
   });
 });
 
