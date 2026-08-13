@@ -478,6 +478,7 @@ img{ max-width: 100%; display:block; }
   border: 1px solid rgba(255,255,255,.07);
   border-radius: 12px;
   padding: 26px 20px;
+  text-align: center;
   transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 .schedule-card:hover{
@@ -502,14 +503,18 @@ img{ max-width: 100%; display:block; }
   list-style:none;
   display:flex;
   flex-direction:column;
+  align-items:center;
   gap: 12px;
+  text-align:center;
 }
 .schedule-times li{
   display:flex;
   flex-direction:column;
+  align-items:center;
   gap: 2px;
   padding-top: 12px;
   border-top: 1px solid rgba(255,255,255,.08);
+  width:100%;
 }
 .schedule-times li:first-child{
   padding-top: 0;
@@ -884,14 +889,20 @@ img{ max-width: 100%; display:block; }
 
   /* el header ya no puede sostener el logo grande + botón en una fila angosta */
   .header-inner{ gap: 10px; }
-  .logo{ width: 56px; }
+  .logo{ width: 66px; }
   .logo-img{
-    width: 56px;
-    height: 56px;
-    top: 8px;
+    width: 66px;
+    height: 66px;
+    top: 6px;
   }
   .header-actions{ gap: 8px; }
   .header-actions .btn{ padding: 8px 12px; font-size: .66rem; }
+
+  /* portada: letras y botones más chicos para que se lea mejor de un vistazo */
+  .hero h1{ font-size: 1.9rem; }
+  .stars-divider{ margin: 16px 0; }
+  .hero-sub{ font-size: .9rem; margin-bottom: 26px; }
+  .hero-buttons .btn{ padding: 11px 20px; font-size: .75rem; }
 }
 
 /* Móvil chico (iPhone SE y similares) */
